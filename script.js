@@ -252,3 +252,36 @@ interactiveCards.forEach(card => {
     card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)';
   });
 });
+
+// --- Dark/Light Mode Toggle ---
+const themeToggle = document.getElementById('themeToggle');
+const themeIcon = themeToggle ? themeToggle.querySelector('i') : null;
+
+// Cek preferensi tema yang tersimpan sebelumnya
+const savedTheme = localStorage.getItem('portfolio_theme') || 'dark';
+if (savedTheme === 'light') {
+  document.documentElement.setAttribute('data-theme', 'light');
+  if (themeIcon) {
+    themeIcon.classList.replace('fa-moon', 'fa-sun');
+  }
+}
+
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    let currentTheme = document.documentElement.getAttribute('data-theme');
+    
+    if (currentTheme === 'light') {
+      document.documentElement.removeAttribute('data-theme');
+      localStorage.setItem('portfolio_theme', 'dark');
+      if (themeIcon) {
+        themeIcon.classList.replace('fa-sun', 'fa-moon');
+      }
+    } else {
+      document.documentElement.setAttribute('data-theme', 'light');
+      localStorage.setItem('portfolio_theme', 'light');
+      if (themeIcon) {
+        themeIcon.classList.replace('fa-moon', 'fa-sun');
+      }
+    }
+  });
+}
