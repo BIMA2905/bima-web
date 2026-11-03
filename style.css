@@ -958,23 +958,42 @@ header {
 
 @media (max-width: 768px) {
   .nav-links {
-    display: none; /* Sembunyikan default */
-    flex-direction: column !important; /* Susun ke bawah */
-    align-items: flex-start !important; /* Rata kiri (atau 'center' kalau mau di tengah) */
+    display: none;
+    flex-direction: column !important;
+    align-items: flex-start !important;
     position: absolute;
     top: 100%;
-    left: 0;
-    width: 100%;
+    
+    /* Mengatur agar lebarnya tidak full, melainkan setengah layar (misal 50% atau 220px) dan menempel di kanan */
+    left: auto !important;
+    right: 5% !important;
+    width: 220px !important; 
+    
+    height: auto !important;
+    min-height: unset !important;
+    max-height: none !important;
+    
     background: var(--bg-color, #0f172a);
     backdrop-filter: blur(10px);
-    padding: 1.5rem 2rem;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem 1.2rem !important; 
+    gap: 0.8rem !important; 
+    
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    border-radius: 12px; /* Membuat sudutnya melengkung rapi */
+    border: 1px solid rgba(255, 255, 255, 0.1);
     z-index: 1000;
-    gap: 1.2rem; /* Jarak antar menu */
   }
 
-  /* Saat menu aktif */
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links li a {
+    display: block;
+    padding: 0.4rem 0;
+    width: 100%;
+  }
+
   .nav-links.active {
     display: flex !important;
   }
