@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bima Alfareza - Portofolio</title>
+  
+  <!-- Google Fonts & FontAwesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Particle Canvas Background -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="brand-logo">Bima Alfareza<span>.</span></a>
+      <div class="nav-toggle" id="navToggle">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero" class="active">Beranda</a></li>
+        <li><a href="#about">Tentang</a></li>
+        <li><a href="#skills">Keahlian</a></li>
+        <li><a href="#projects">Proyek</a></li>
+        <li><a href="#contact">Kontak</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="hero-content">
+      <div class="badge">Mahasiswa & Web Developer Enthusiast 💻</div>
+      <h1>Halo, Saya <span class="highlight">Bima Alfareza</span></h1>
+      <h2 class="typing-text"><span id="typed-target"></span><span class="cursor">&nbsp;</span></h2>
+      <p>
+        Mahasiswa yang antusias mendalami dunia pengembangan website dan arsitektur basis data, berfokus pada pembangunan aplikasi yang fungsional dan terstruktur.
+      </p>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn btn-primary"><i class="fa-solid fa-briefcase"></i> Lihat Proyek</a>
+        <a href="#contact" class="btn btn-outline"><i class="fa-solid fa-paper-plane"></i> Hubungi Saya</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section reveal">
+    <div class="section-title">
+      <h2>Tentang Saya</h2>
+      <div class="line"></div>
+    </div>
+    
+    <!-- Wrapper Foto dan Teks Berdampingan -->
+    <div class="about-content-wrapper glass" style="padding: 2.5rem; border-radius: 24px;">
+      <div class="about-img-container">
+        <img src="image/bima.jpg" alt="Bima Alfareza" />
+      </div>
+      <div class="about-text">
+        <p>Saya adalah seorang mahasiswa yang memiliki ketertarikan mendalam pada pengembangan aplikasi web dan pengelolaan basis data. Saya terbiasa merancang alur logika sistem, membangun fungsionalitas <em>backend</em>, serta memastikan struktur data tertata dengan rapi dan efisien.</p>
+        <p>Melalui berbagai proyek akademik maupun pengembangan mandiri, saya terus mengasah kemampuan teknis untuk menghadirkan solusi digital yang andal.</p>
+      </div>
+    </div>
+
+    <!-- Tiga Kartu Kecil di Bawahnya -->
+    <div class="about-container" style="margin-top: 2rem;">
+      <div class="about-card glass">
+        <div class="about-icon">
+          <i class="fa-solid fa-graduation-cap"></i>
+        </div>
+        <h3>Edukasi & Fokus</h3>
+        <p>Sebagai mahasiswa Sistem Informasi, saya menjembatani kebutuhan teknologi dengan strategi informasi yang efisien.</p>
+      </div>
+      <div class="about-card glass">
+        <div class="about-icon">
+          <i class="fa-solid fa-code"></i>
+        </div>
+        <h3>Web Development</h3>
+        <p>Mengembangkan aplikasi web modern yang cepat, aman, dan responsif di berbagai perangkat.</p>
+      </div>
+      <div class="about-card glass">
+        <div class="about-icon">
+          <i class="fa-solid fa-chart-pie"></i>
+        </div>
+        <h3>UI/UX & Data Analytics</h3>
+        <p>Merancang antarmuka intuitif dan mengolah data untuk pengambilan keputusan berbasis fakta.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section reveal">
+    <div class="section-title">
+      <h2><i class="fa-solid fa-tools"></i> Tech Stack & Tools Matrix</h2>
+      <p class="section-subtitle">Teknologi dan perkakas utama yang biasa saya gunakan dalam membangun aplikasi web dan pengelolaan basis data.</p>
+      <div class="line"></div>
+    </div>
+
+    <!-- Filter Buttons Baru -->
+    <div class="tech-filter">
+      <button class="filter-btn active" data-filter="all">Semua</button>
+      <button class="filter-btn" data-filter="backend">Backend & Logic</button>
+      <button class="filter-btn" data-filter="frontend">Frontend</button>
+      <button class="filter-btn" data-filter="tools">Database & Tools</button>
+    </div>
+
+    <div class="tech-grid">
+      
+      <!-- PHP -->
+      <div class="tech-card glass" data-category="backend">
+        <div class="tech-icon" style="color: #777bb3;"><i class="fa-brands fa-php"></i></div>
+        <h3>PHP</h3>
+        <p>Bahasa utama untuk pengembangan sisi server (backend).</p>
+      </div>
+
+      <!-- Laravel -->
+      <div class="tech-card glass" data-category="backend">
+        <div class="tech-icon" style="color: #ff2d20;"><i class="fa-brands fa-laravel"></i></div>
+        <h3>Laravel</h3>
+        <p>Framework PHP untuk membangun aplikasi web terstruktur.</p>
+      </div>
+
+      <!-- MySQL & Database -->
+      <div class="tech-card glass" data-category="tools">
+        <div class="tech-icon" style="color: #00758f;"><i class="fa-solid fa-database"></i></div>
+        <h3>MySQL & Database</h3>
+        <p>Perancangan skema relasional, query, dan manajemen data.</p>
+      </div>
+
+      <!-- HTML / CSS / JS -->
+      <div class="tech-card glass" data-category="frontend">
+        <div class="tech-icon" style="color: #e34f26;"><i class="fa-solid fa-code"></i></div>
+        <h3>HTML / CSS / JS</h3>
+        <p>Fondasi antarmuka web interaktif dan responsif.</p>
+      </div>
+
+      <!-- Git & GitHub -->
+      <div class="tech-card glass" data-category="tools">
+        <div class="tech-icon" style="color: #f05032;"><i class="fa-brands fa-git-alt"></i></div>
+        <h3>Git & GitHub</h3>
+        <p>Kontrol versi kode dan manajemen proyek kolaboratif.</p>
+      </div>
+
+      <!-- Problem Solving -->
+      <div class="tech-card glass" data-category="backend">
+        <div class="tech-icon" style="color: #f59e0b;"><i class="fa-solid fa-lightbulb"></i></div>
+        <h3>Problem Solving</h3>
+        <p>Analisis logika sistem dan pemecahan masalah pemrograman.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section reveal">
+    <div class="section-title">
+      <h2><i class="fa-solid fa-briefcase"></i> Proyek Utama</h2>
+      <p class="section-subtitle">Beberapa hasil karya dan proyek sistem nyata yang pernah saya kembangkan.</p>
+      <div class="line"></div>
+    </div>
+    <div class="projects-grid">
+      
+      <!-- Proyek 1: Sistem Informasi Beasiswa SMA -->
+      <div class="project-card glass" onclick="openModal('project-sma')">
+        <div class="project-tag">Web Application</div>
+        <div class="project-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+        <h3>Sistem Informasi Beasiswa SMA</h3>
+        <p>Aplikasi web untuk pengelolaan dan pendukung keputusan penerimaan beasiswa di lingkungan Sekolah Menengah Atas.</p>
+        <div class="tech-stack">
+          <span>HTML/CSS</span>
+          <span>PHP</span>
+          <span>MySQL</span>
+        </div>
+        <button class="btn-detail">Lihat Detail <i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+
+      <!-- Proyek 2: Sistem Informasi Desa Sokoyoso -->
+      <div class="project-card glass" onclick="openModal('project-desa')">
+        <div class="project-tag">Community Web App</div>
+        <div class="project-icon"><i class="fa-solid fa-globe"></i></div>
+        <h3>Sistem Informasi Desa Sokoyoso</h3>
+        <p>Platform web layanan masyarakat desa yang mencakup pengaduan, layanan surat domisili, dan panel admin terpusat.</p>
+        <div class="tech-stack">
+          <span>Laravel</span>
+          <span>PHP</span>
+          <span>MySQL</span>
+        </div>
+        <button class="btn-detail">Lihat Detail <i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MODAL POPUP CONTAINER -->
+  <div id="projectModal" class="modal-overlay" onclick="closeModalOnOverlay(event)">
+    <div class="modal-content glass">
+      <span class="modal-close" onclick="closeModal()">&times;</span>
+      <div id="modalBody">
+        <!-- Isi modal akan diisi secara dinamis melalui JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section reveal">
+    <div class="section-title">
+      <h2>Mari Terhubung</h2>
+      <div class="line"></div>
+    </div>
+    <div class="contact-card glass">
+      <p>Tertarik berdiskusi seputar pengembangan web, basis data, atau peluang kolaborasi proyek? Silakan hubungi saya melalui platform di bawah ini.</p>
+      <div class="social-links">
+        <a href="https://github.com/BIMA2905" target="_blank" class="social-btn"><i class="fa-brands fa-github"></i></a>
+        <a href="https://linkedin.com" target="_blank" class="social-btn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://wa.me/6285601651141" target="_blank" class="social-btn"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://instagram.com/bimbim_bukan_slank" target="_blank" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
+        <a href="mailto:bima.alfareza@example.com" class="social-btn"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <p>&copy; 2026 Bima Alfareza. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Panggil file JavaScript Eksternal -->
+  <script src="script.js"></script>
+</body>
+</html>
