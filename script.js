@@ -285,3 +285,31 @@ if (themeToggle) {
     }
   });
 }
+
+// --- Fungsi Hamburger Menu Mobile ---
+
+if (navToggle && navLinks) {
+  navToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    
+    // Mengubah ikon garis tiga (bars) menjadi tanda silang (xmark) saat dibuka
+    const icon = navToggle.querySelector('i');
+    if (icon) {
+      icon.classList.toggle('fa-bars');
+      icon.classList.toggle('fa-xmark');
+    }
+  });
+
+  // Menutup menu otomatis ketika salah satu link menu diklik
+  const navItems = navLinks.querySelectorAll('li a');
+  navItems.forEach(item => {
+    item.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+      const icon = navToggle.querySelector('i');
+      if (icon) {
+        icon.classList.add('fa-bars');
+        icon.classList.remove('fa-xmark');
+      }
+    });
+  });
+}
